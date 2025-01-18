@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.App{
+    padding: 10px;
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 5px;
+    background-color: rgb(43, 42, 42);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.mainWrapper{
+    width: 97vw;
+    height: 56vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.searchContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 8px;
+    width: 60%;
+    height: 8vh;
+    background-color: #121214;
+    border: 2px solid #121214;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.searchContainer:hover{
+    border: 2px solid #f5f5f1;
+}
+
+.searchContainer:focus{
+    border: 2px solid rgb(73, 68, 68);
+}
+
+.searchInput{
+    width: 90%;
+    height: 100%;
+    border: none;
+    font-size: 24px;
+    background-color: transparent;
+    padding-left: 10px;
+}
+
+.searchContainer img{
+    border-radius: 40%;
+    height: 6vh;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.searchContainer img:hover{
+    background-color: #4b4343;
+}
+
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+    gap: 18px;
+    background-color: #191919;
+}
+
+.currentWeather{
+    display: flex;
+    justify-content: space-around;
+}
+
+.basicInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.basicInfo .location {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+  }
+  
+  .basicInfo .iconBox {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .basicInfo .temp {
+    font-size: 100px;
+  }
+  
+  .basicInfo .description {
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+ .extraInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+ } 
+
+ .extraInfo .tempContainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .tempContainer .tempBox {
+    display: flex;
+    gap: 5px;
+  }
+  
+.tempContainer .tempBox img {
+    width: 22px;
+  }
+
+  .row {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .row img {
+    width: 20px;
+  }
+
+  .forecastContainer {
+    width: 96vw; 
+    height: 28vh;
+    border-radius: 3px;
+    display: flex;
+    gap: 1px;
+    overflow-x: scroll;
+  }
+
+  .cardBody {
+    width:20%;
+    height: 24vh;
+    background-color: rgb(27, 28, 28);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 5px;
+    color: #fff;
+  }
+
+  .cardImg{
+    height: 10vh;
+  }
+
+  .footer {
+    margin: 0 auto;
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 10px;
+  }
+  
+  .footer span {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .footer span a {
+    text-decoration: none;
+    color: #0a71c9;
+    opacity: 0.6;
+  }
+  
+  .footer span a:hover {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 500px) {
+    .footer {
+      position: relative;
+    }
+  
+    body,
+    html,
+    .App {
+        width:95vw;
+      height: 100vh;
+      padding: 0;
+    }
+  
+    .searchContainer img {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .mainContainer,
+    .searchContainer {
+      width: 95%;
+      margin-top: 0;
+    }
+  
+    .currentWeather {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .basicInfo .iconBox .icon {
+      width: 90px;
+    }
+  
+    .basicInfo .temp {
+      font-size: 82px;
+    }
+  
+    .extraInfo {
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .footer {
+      position: absolute;
+      bottom: 0;
+  
+    }
+  
+  }
